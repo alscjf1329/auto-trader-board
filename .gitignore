@@ -1,0 +1,4 @@
+.next/
+node_modules/
+data/          # SQLite DB — 서버 로컬에만
+.env.local

@@ -1,0 +1,10 @@
+services:
+  profit-board:
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./data:/app/data
+    environment:
+      DB_PATH: /app/data/trades.db
+    restart: unless-stopped
