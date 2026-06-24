@@ -18,6 +18,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <a href="/marketplace" className="text-sm text-gray-400 hover:text-white transition-colors">
               전략 마켓
             </a>
+            <a href="/control" className="text-sm text-gray-400 hover:text-white transition-colors">
+              제어판
+            </a>
             <a
               href="/register"
               className="text-sm bg-indigo-600 hover:bg-indigo-500 px-4 py-1.5 rounded-md transition-colors"

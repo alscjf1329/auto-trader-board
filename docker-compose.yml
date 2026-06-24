@@ -7,4 +7,10 @@ services:
       - ./data:/app/data
     environment:
       DB_PATH: /app/data/trades.db
+      # auto-trader 제어 서버 연동 (python control.py)
+      # 같은 PC에서 실행 중이면 host.docker.internal 사용
+      CONTROL_ENDPOINT: ${CONTROL_ENDPOINT:-http://host.docker.internal:5001}
+      CONTROL_SECRET:   ${CONTROL_SECRET:-}
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     restart: unless-stopped
